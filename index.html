@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fde4ec">
+<title>Happy Birthday, My Love</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<!-- Lapisan efek: hati, kelopak, sparkle melayang -->
+<div id="fx" aria-hidden="true"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<!-- ========== 1. INTRO ========== -->
+<section id="intro">
+  <p class="eyebrow">for someone special</p>
+  <h1 class="script">Happy Birthday, My Love!</h1>
+  <h2 class="partner" id="partnerName">Sayangku Cinta Pelisa</h2>
+
+  <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Buka amplop">
+    <div class="env-back"></div>
+    <div class="env-letter"><span>I love you 💗</span></div>
+    <div class="env-front"></div>
+    <div class="env-flap"></div>
+    <div class="env-seal">♥</div>
+  </div>
+
+  <button class="btn" id="openBtn">Open Your Surprise</button>
+  <p class="hint">Klik amplop atau tombol di atas ✨</p>
+</section>
+
+<!-- ========== MAIN ========== -->
+<main id="main" class="hidden">
+
+  <button id="musicBtn" class="music" aria-label="Play atau pause musik">
+    <span class="eq"><i></i><i></i><i></i><i></i></span>
+    <span id="musicIcon">▶</span>
+  </button>
+
+  <header class="hero reveal">
+    <p class="eyebrow">today is all about you</p>
+    <h1 class="script big">Happy Birthday</h1>
+    <h2 class="partner" id="heroName">Nama Pasangan</h2>
+    <p class="sub" id="heroSub"></p>
+    <a href="#gallery" class="scroll-hint">scroll ↓</a>
+  </header>
+
+  <section id="gallery" class="section">
+    <h2 class="title reveal">Our Little Moments</h2>
+    <p class="lead reveal">Klik foto untuk memperbesar</p>
+    <div class="board" id="board"></div>
+  </section>
+
+  <section id="letter" class="section">
+    <h2 class="title reveal">A Little Letter For You</h2>
+    <div class="paper glass reveal" id="paper">
+      <div class="paper-cover" id="paperCover">
+        <span>💌</span>
+        <button class="btn small" id="readBtn">Baca Suratnya</button>
+      </div>
+      <div class="paper-text" id="typeTarget"></div>
+    </div>
+  </section>
+
+  <section id="memories" class="section">
+    <h2 class="title reveal">Our Memories</h2>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <section id="surprise" class="section center">
+    <h2 class="title reveal">One More Thing…</h2>
+    <button class="btn reveal" id="surpriseBtn">Click For A Surprise</button>
+    <p class="surprise-msg" id="surpriseMsg"></p>
+
+    <div class="cake-wrap reveal">
+      <div class="cake">
+        <div class="candles" id="candles"></div>
+        <div class="tier t1"></div><div class="tier t2"></div><div class="plate"></div>
+      </div>
+      <button class="btn small" id="blowBtn">Tiup Lilin 🌬️</button>
+      <p class="wish" id="wishMsg"></p>
+    </div>
+  </section>
+
+  <footer>Made with 💗 just for you</footer>
+  <div id="toast" class="toast" hidden></div>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" hidden>
+  <button class="lb-close" aria-label="Tutup">✕</button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+</div>
+
+<audio id="bgm" src="assets/music/happy-birthday.mp3" preload="auto" loop></audio>
+<script src="script.js"></script>
+</body>
+</html>
